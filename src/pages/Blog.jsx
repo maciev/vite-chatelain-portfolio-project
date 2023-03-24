@@ -18,13 +18,11 @@ function Blog() {
 
   return (
     <Layout>
-      <div className="min-h-screen min-w-full overflow-wra bg-gray-50">
-        <Header />
-        <div className="flex flex-col items-start mx-12 ">
-          <h1 className="ml-4">Blog 2 ✍</h1>
-          <Largecard vertical={true} />
+      <div className="bg-gray-50">
+        <div className=" flex flex-col items-start mx-12 ">
+          {/*<Largecard headerMargin="mt-16" className="mt-20" vertical={true} />*/}
           {width > 1024 ? (
-            <div className="flex flex-row gap-5 w-full pt-16">
+            <div className="grid grid-flow-col grid-rows-4 gap-3 mt-20 w-full pt-16">
               <Blogcard />
               <Blogcard />
               <Blogcard />
@@ -33,9 +31,9 @@ function Blog() {
           ) : (
             <div>
               <div className="">
-                <Largecard vertical={true} />
+                <Largecard headerMargin="mt-24" vertical={true} />
               </div>
-              <div className="flex flex-row gap-5 w-full pt-16">
+              <div className="grid grid-flow-col grid-rows-2  gap-3 w-full pt-16">
                 <Blogcard />
                 <Blogcard />
                 <Blogcard />

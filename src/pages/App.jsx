@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Layout>
-      <div className="max-w-lg m-auto text-white pt-24 ">
+      <div className="max-w-lg m-auto text-white pt-24  ">
         <h1 className="pb-12 text-9xl font-fragment ">
           Hi, I'm Andrew
           {/*<span>👋</span>*/}
@@ -21,14 +21,10 @@ function App() {
           My specialities include React, Typescript, Prisma, Vite, and others
         </p>
         <div className="flex flex-row gap-8 items-center mt-10 justify-center">
-          <img src="../../public/react.png" alt="React" className="h-14" />
-          <img
-            src="../../public/typescript.png"
-            alt="Typescript"
-            className="h-14"
-          />
-          <img src="../../public/prisma.png" alt="Prisma" className="h-14" />
-          <img src="../../public/vite.png" alt="Vite" className="h-14" />
+          <img src="react.png" alt="React" className="h-14" />
+          <img src="typescript.png" alt="Typescript" className="h-14" />
+          <img src="prisma.png" alt="Prisma" className="h-14" />
+          <img src="vite.png" alt="Vite" className="h-14" />
         </div>
       </div>
       <div className="flex flex-col">

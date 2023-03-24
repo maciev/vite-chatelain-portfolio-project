@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
-export default function LargeCard() {
+export default function LargeCard({ headerMargin }) {
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakPoint = 600;
+  const breakPoint = 1024;
 
   useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
@@ -12,14 +12,10 @@ export default function LargeCard() {
   }, []);
 
   return (
-    <div>
+    <div className={`${headerMargin}`}>
       {width > breakPoint ? (
         <div className="flex flex-row items-center mt-12 ml-4 ">
-          <img
-            className="rounded max-w-12 "
-            src="https://dwinawan.com/blog/thumb_article9.jpg"
-            alt=""
-          />
+          <img className="rounded max-w-6 " alt="" />
 
           <div className="flex flex-col w-full ml-4 ">
             <h1 className="pb-2 text-xs font-bold text-gray-400">
@@ -37,7 +33,7 @@ export default function LargeCard() {
       ) : (
         <div className="flex flex-col items-center mt-12 ml-4 ">
           <img
-            className="rounded max-w-12 "
+            className="rounded max-w-6 "
             src="https://dwinawan.com/blog/thumb_article9.jpg"
             alt=""
           />

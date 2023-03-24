@@ -12,7 +12,7 @@ export default function Layout({ children }) {
 
         <main className="">{children}</main>
 
-        <footer>
+        <footer className="fixed bottom-0">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https:chatela.in">Made with Vite + React</a>

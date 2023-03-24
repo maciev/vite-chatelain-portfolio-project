@@ -5,14 +5,20 @@ export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <nav className="flex flex-wrap items-center justify-between px-5 py-4">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
+    <nav
+      className={`fixed flexflex-wrap w-full items-center px-5 py-4  ${
+        window.location.pathname === "/blog"
+          ? "bg-blue-900 bg-opacity-20 backdrop-blur-sm shadow-lg"
+          : "bg-white bg-opacity-20 backdrop-blur-sm shadow-lg"
+      }`}
+    >
+      {/*<div className="flex items-center flex-shrink-0 mr-6  text-white">
         <span className="text-xl font-semibold tracking-tight">
-          {/*{siteTitle}*/}
+          {siteTitle}
         </span>
-      </div>
+      </div>*/}
 
-      <div className=" md:hidden ">
+      <div className=" md:hidden">
         {!isExpanded && (
           <button
             onClick={() => toggleExpansion(!isExpanded)}
@@ -34,18 +40,18 @@ export default function Header() {
           isExpanded ? `block` : `hidden`
         }  lg:flex lg:items-center lg:w-auto`}
       >
-        <div className="flex  flex-row bg-red-400 justify-end">
-          <b className="flex bg-red-400 lg:flex-row">
+        <div className="flex  flex-row justify-start">
+          <b className="flex lg:flex-row mr-4 gap-3">
             <Link
               to={`/`}
               href="#responsive-Header"
-              className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+              className="block text-white lg:inline-block lg:mt-0 hover:text-white"
             >
               Home
             </Link>
             <Link
               to={`/blog`}
-              className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+              className="block text-white lg:inline-block lg:mt-0 hover:text-white"
             >
               Blog
             </Link>
